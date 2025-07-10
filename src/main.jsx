@@ -5,11 +5,19 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Home from './Layouts/Home/Home';
+import Error from './Components/Error/Error';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello world!</div>,
+    element: <Home></Home>,
+    errorElement: <Error></Error>,
+    children : [
+      {
+        
+      }
+    ]
   },
 ]);
 
