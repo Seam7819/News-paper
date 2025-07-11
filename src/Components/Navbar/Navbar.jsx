@@ -4,7 +4,7 @@ import logo from "../../../public/user.png"
 const Navbar = () => {
 
     const links = <>
-        <li><NavLink to="/home">Home</NavLink></li>
+        <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/about">About</NavLink></li>
         <li><NavLink to="/career">Career</NavLink></li>
     </>
