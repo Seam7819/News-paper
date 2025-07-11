@@ -1,5 +1,8 @@
+import { Outlet } from "react-router-dom";
 import Header from "../../Components/Header/Header";
 import Headline from "../../Components/Headline/Headline";
+import LeftAside from "../../Components/LeftAside/LeftAside";
+import Navbar from "../../Components/Navbar/Navbar";
 
 const Home = () => {
     return (
@@ -10,6 +13,20 @@ const Home = () => {
             <div className="flex items-center bg-slate-400 rounded-sm"><button className="btn btn-info">Latest</button>
                 <Headline></Headline>
             </div>
+            <div>
+                <Navbar></Navbar>
+            </div>
+            <main className="max-w-7xl mx-auto grid md:grid-cols-12">
+                <div className="col-span-3 ">
+                    <aside > <LeftAside></LeftAside> </aside>
+                </div>
+                <div className="col-span-6 ">
+                    <section> <Outlet></Outlet> </section>
+                </div>
+                <div className="col-span-3 ">
+                    <aside >Side nav</aside>
+                </div>
+            </main>
         </div>
     );
 };

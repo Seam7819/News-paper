@@ -6,19 +6,19 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Home from './Layouts/Home/Home';
-import Error from './Components/Error/Error';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home></Home>,
-    errorElement: <Error></Error>,
     children : [
       {
-        
+        path: "/category/:id",
+        element: <h2>This is category</h2>
       }
     ]
   },
+  
 ]);
 
 createRoot(document.getElementById('root')).render(
