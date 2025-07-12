@@ -4,7 +4,6 @@ import NewsCard from "../NewsCard/NewsCard";
 const CategoryNews = () => {
 
     const {data} = useLoaderData()
-    console.log(data);
 
     return (
         <div>
@@ -12,8 +11,9 @@ const CategoryNews = () => {
              <h3 className="font-light my-3">{data.length} News Found in this Category</h3>
              <div>
                 {
-                    data.map(singleNews => <NewsCard  singleNews={singleNews}></NewsCard>)
+                    data.map(singleNews => <NewsCard key={singleNews._id}  singleNews={singleNews}></NewsCard>)
                 }
+                
              </div>
         </div>
     );

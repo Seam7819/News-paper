@@ -3,6 +3,7 @@ import Header from "../../Components/Header/Header";
 import Headline from "../../Components/Headline/Headline";
 import LeftAside from "../../Components/LeftAside/LeftAside";
 import Navbar from "../../Components/Navbar/Navbar";
+import RightAside from "../../Components/RightAside/RightAside";
 
 const Home = () => {
     return (
@@ -24,7 +25,7 @@ const Home = () => {
                     <section> <Outlet></Outlet> </section>
                 </div>
                 <div className="col-span-3 ">
-                    <aside >Side nav</aside>
+                    <aside ><RightAside></RightAside></aside>
                 </div>
             </main>
         </div>
